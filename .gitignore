@@ -1,2 +1,21 @@
-/gh-label-sync
-/gh-label-sync.exe
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# Built binary (will be rebuilt)
+gh-label-sync
