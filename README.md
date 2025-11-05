@@ -1,6 +1,13 @@
 # gh-label-sync
 
-A GitHub CLI extension for bulk label management and synchronization from YAML/JSON files.
+[![GitHub Release](https://img.shields.io/github/v/release/scttfrdmn/gh-label-sync)](https://github.com/scttfrdmn/gh-label-sync/releases)
+[![Go Version](https://img.shields.io/github/go-mod/go-version/scttfrdmn/gh-label-sync)](https://go.dev/)
+[![License](https://img.shields.io/github/license/scttfrdmn/gh-label-sync)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/scttfrdmn/gh-label-sync?style=social)](https://github.com/scttfrdmn/gh-label-sync)
+
+> A GitHub CLI extension for bulk label management and synchronization from YAML/JSON/CSV files.
+
+**No more 47 individual API calls!** Declarative label management with multi-format support (YAML, JSON, CSV), intelligent diffing, and safe preview mode.
 
 ## Why This Extension?
 
@@ -17,9 +24,9 @@ gh extension install scttfrdmn/gh-label-sync
 ### Sync Labels from File
 
 ```bash
-gh label-sync --file .github/labels.yml
-gh label-sync --file labels.json --repo owner/repo
-gh label-sync --file labels.yml --dry-run
+gh label-sync sync --file .github/labels.yml
+gh label-sync sync --file labels.json --repo owner/repo
+gh label-sync sync --file labels.yml --dry-run
 ```
 
 **Flags:**
