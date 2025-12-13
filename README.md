@@ -9,6 +9,15 @@
 
 **No more 47 individual API calls!** Declarative label management with multi-format support (YAML, JSON, CSV), intelligent diffing, and safe preview mode.
 
+## Features
+
+📁 **Multi-Format Support** - YAML, JSON, and CSV label definitions
+🔄 **Intelligent Sync** - Smart diffing shows exactly what will change
+🛡️ **Safe Preview Mode** - Dry-run before applying changes
+📤 **Export Existing Labels** - Extract current labels to any format
+🔁 **Clone Between Repos** - Quick label copying across repositories
+🎯 **Selective Updates** - Fine-grained control with `--force` and `--delete-unmanaged`
+
 ## Why This Extension?
 
 Setting up labels in new repositories or syncing label changes across multiple repos is tedious with the GitHub web UI or requires writing custom scripts. This extension provides declarative label management with support for multiple file formats.
@@ -17,6 +26,22 @@ Setting up labels in new repositories or syncing label changes across multiple r
 
 ```bash
 gh extension install scttfrdmn/gh-label-sync
+```
+
+## Quick Start
+
+```bash
+# Export current labels to a file
+gh label-sync export > .github/labels.yml
+
+# Preview what would change
+gh label-sync sync --file .github/labels.yml --dry-run
+
+# Apply the changes
+gh label-sync sync --file .github/labels.yml
+
+# Copy labels from another repo
+gh label-sync clone source/repo --repo target/repo
 ```
 
 ## Commands
